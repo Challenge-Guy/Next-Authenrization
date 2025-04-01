@@ -62,7 +62,7 @@ export class RequestError extends Error {
  * {@link UserProviderProps.fetcher} prop.
  *
  * @throws {@link RequestError}
- */
+ */  
 type UserFetcher = (url: string) => Promise<UserProfile | undefined>;
 
 /**
