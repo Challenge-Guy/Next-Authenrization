@@ -15,9 +15,9 @@ export interface UserProfile {
   nickname?: string | null;
   picture?: string | null;
   sub?: string | null;
-  updated_at?: string | null;
-  org_id?: string | null;
-  [key: string]: unknown; // Any custom claim which could be in the profile
+  updated_at?: string | null; 
+  org_id?: string | null; 
+  [key: string]: unknown; // Any custom claim which could be in the profile 
 }
 
 /**
@@ -27,9 +27,9 @@ export interface UserProfile {
  */
 export type UserContext = {
   user?: UserProfile;
-  error?: Error;
-  isLoading: boolean;
-  checkSession: () => Promise<void>;
+  error?: Error; 
+  isLoading: boolean; 
+  checkSession: () => Promise<void>; 
 };
 
 /**
