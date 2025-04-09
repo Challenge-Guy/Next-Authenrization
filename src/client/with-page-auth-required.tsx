@@ -2,24 +2,24 @@
 import React, { ComponentType, useEffect } from 'react';
 
 import { useConfig } from './use-config';
-import { useUser, UserProfile } from './use-user';
+import { useUser, UserProfile } from './use-user'; 
 
 /**
  * @ignore
  */
-const defaultOnRedirecting = (): JSX.Element => <></>;
+const defaultOnRedirecting = (): JSX.Element => <></>; 
 
 /**
  * @ignore
  */
-const defaultOnError = (): JSX.Element => <></>;
+const defaultOnError = (): JSX.Element => <></>; 
 
 /**
  * Options to customize the withPageAuthRequired higher order component.
  *
  * @category Client
  */
-export interface WithPageAuthRequiredOptions {
+export interface WithPageAuthRequiredOptions { 
   /**
    * ```js
    * withPageAuthRequired(Profile, {
@@ -39,7 +39,7 @@ export interface WithPageAuthRequiredOptions {
    *
    * Render a message to show that the user is being redirected to the login.
    */
-  onRedirecting?: () => JSX.Element;
+  onRedirecting?: () => JSX.Element; 
   /**
    * ```js
    * withPageAuthRequired(Profile, {
@@ -52,9 +52,9 @@ export interface WithPageAuthRequiredOptions {
   onError?: (error: Error) => JSX.Element;
 }
 
-export interface UserProps {
-  user: UserProfile;
-}
+export interface UserProps { 
+  user: UserProfile; 
+} 
 
 /**
  * ```js
@@ -66,10 +66,10 @@ export interface UserProps {
  *
  * @category Client
  */
-export type WithPageAuthRequired = <P extends {}>(
-  Component: ComponentType<P & UserProps>,
-  options?: WithPageAuthRequiredOptions
-) => React.FC<P>;
+export type WithPageAuthRequired = <P extends {}>(  
+  Component: ComponentType<P & UserProps>,  
+  options?: WithPageAuthRequiredOptions  
+) => React.FC<P>;  
 
 /**
  * @ignore
