@@ -9,14 +9,14 @@ import ConfigProvider, { ConfigContext } from './use-config';
  * @category Client
  */
 export interface UserProfile {
-  email?: string | null;
-  email_verified?: boolean | null;
+  email?: string | null;  
+  email_verified?: boolean | null;  
   name?: string | null;
   nickname?: string | null;
   picture?: string | null;
   sub?: string | null;
-  updated_at?: string | null; 
-  org_id?: string | null; 
+  updated_at?: string | null;   
+  org_id?: string | null;   
   [key: string]: unknown; // Any custom claim which could be in the profile 
 }
 
@@ -25,12 +25,12 @@ export interface UserProfile {
  *
  * @category Client
  */
-export type UserContext = {
-  user?: UserProfile;
-  error?: Error; 
-  isLoading: boolean; 
-  checkSession: () => Promise<void>; 
-};
+export type UserContext = {  
+  user?: UserProfile;  
+  error?: Error;   
+  isLoading: boolean;   
+  checkSession: () => Promise<void>;   
+};  
 
 /**
  * The error thrown by the default {@link UserFetcher}.
