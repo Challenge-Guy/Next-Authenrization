@@ -8,22 +8,22 @@ import ConfigProvider, { ConfigContext } from './use-config';
  *
  * @category Client
  */
-export interface UserProfile {
-  email?: string | null;  
-  email_verified?: boolean | null;  
-  name?: string | null;
-  nickname?: string | null;
-  picture?: string | null;
-  sub?: string | null;
-  updated_at?: string | null;   
-  org_id?: string | null;   
-  [key: string]: unknown; // Any custom claim which could be in the profile 
+export interface UserProfile { 
+  email?: string | null;   
+  email_verified?: boolean | null;   
+  name?: string | null; 
+  nickname?: string | null; 
+  picture?: string | null; 
+  sub?: string | null; 
+  updated_at?: string | null;    
+  org_id?: string | null;    
+  [key: string]: unknown; // Any custom claim which could be in the profile  
 }
 
 /**
- * The user context returned from the {@link useUser} hook.
+ * The user context returned from the {@link useUser} hook. 
  *
- * @category Client
+ * @category Client 
  */
 export type UserContext = {  
   user?: UserProfile;  
@@ -33,10 +33,10 @@ export type UserContext = {
 };  
 
 /**
- * The error thrown by the default {@link UserFetcher}.
+ * The error thrown by the default {@link UserFetcher}. 
  *
- * The `status` property contains the status code of the response. It is `0` when the request
- * fails, for example due to being offline.
+ * The `status` property contains the status code of the response. It is `0` when the request 
+ * fails, for example due to being offline. 
  *
  * This error is not thrown when the status code of the response is `204`, because that means the
  * user is not authenticated.
