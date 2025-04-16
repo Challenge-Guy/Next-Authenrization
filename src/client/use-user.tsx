@@ -54,19 +54,19 @@ export class RequestError extends Error {
   }
 }
 
-/**
- * Fetches the user from the profile API route to fill the {@link useUser} hook with the
- * {@link UserProfile} object.
+/** 
+ * Fetches the user from the profile API route to fill the {@link useUser} hook with the 
+ * {@link UserProfile} object. 
+ * 
+ * If needed, you can pass a custom fetcher to the {@link UserProvider} component via the 
+ * {@link UserProviderProps.fetcher} prop. 
  *
- * If needed, you can pass a custom fetcher to the {@link UserProvider} component via the
- * {@link UserProviderProps.fetcher} prop.
- *
- * @throws {@link RequestError}
+ * @throws {@link RequestError} 
  */  
-type UserFetcher = (url: string) => Promise<UserProfile | undefined>;
+type UserFetcher = (url: string) => Promise<UserProfile | undefined>; 
 
 /**
- * Configure the {@link UserProvider} component.
+ * Configure the {@link UserProvider} component. 
  *
  * If you have any server-side rendered pages (using `getServerSideProps` or Server Components), you should get the
  * user from the server-side session and pass it to the `<UserProvider>` component via the `user`
@@ -77,11 +77,11 @@ type UserFetcher = (url: string) => Promise<UserProfile | undefined>;
  * // pages/_app.js
  * import React from 'react';
  * import { UserProvider } from '@auth0/nextjs-auth0/client';
- *
+ * 
  * export default function App({ Component, pageProps }) {
- *   // If you've used `withPageAuthRequired`, `pageProps.user` can prefill the hook
- *   // if you haven't used `withPageAuthRequired`, `pageProps.user` is undefined so the hook
- *   // fetches the user from the API route
+ *   // If you've used `withPageAuthRequired`, `pageProps.user` can prefill the hook 
+ *   // if you haven't used `withPageAuthRequired`, `pageProps.user` is undefined so the hook 
+ *   // fetches the user from the API route 
  *   const { user } = pageProps;
  *
  *   return (
