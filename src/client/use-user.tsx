@@ -17,15 +17,15 @@ export interface UserProfile {
   sub?: string | null;
   updated_at?: string | null;
   org_id?: string | null;
-  [key: string]: unknown; // Any custom claim which could be in the profile
-}
+  [key: string]: unknown; // Any custom claim which could be in the profile 
+} 
 
 /**
  * The user context returned from the {@link useUser} hook.
  *
  * @category Client
  */
-export type UserContext = {  
+export type UserContext = {
   user?: UserProfile;
   error?: Error;
   isLoading: boolean;
@@ -33,10 +33,10 @@ export type UserContext = {
 };  
 
 /**
- * The error thrown by the default {@link UserFetcher}.
- *                         
- * The `status` property contains the status code of the response. It is `0` when the request   
- * fails, for example due to being offline.   
+ * The error thrown by the default {@link UserFetcher}/
+ *
+ * The `status` property contains the status code of the response. It is `0` when the request
+ * fails, for example due to being offline.
  *
  * This error is not thrown when the status code of the response is `204`, because that means the
  * user is not authenticated.
@@ -55,18 +55,18 @@ export class RequestError extends Error {
 }
 
 /** 
- * Fetches the user from the profile API route to fill the {@link useUser} hook with the 
- * {@link UserProfile} object. 
- * 
- * If needed, you can pass a custom fetcher to the {@link UserProvider} component via the 
- * {@link UserProviderProps.fetcher} prop. 
+ * Fetches the user from the profile API route to fill the {@link useUser} hook with the
+ * {@link UserProfile} object.
  *
- * @throws {@link RequestError} 
- */  
-type UserFetcher = (url: string) => Promise<UserProfile | undefined>; 
+ * If needed, you can pass a custom fetcher to the {@link UserProvider} component via the
+ * {@link UserProviderProps.fetcher} prop.
+ *
+ * @throws {@link RequestError}
+ */
+type UserFetcher = (url: string) => Promise<UserProfile | undefined>;
 
 /**
- * Configure the {@link UserProvider} component. 
+ * Configure the {@link UserProvider} component.
  *
  * If you have any server-side rendered pages (using `getServerSideProps` or Server Components), you should get the
  * user from the server-side session and pass it to the `<UserProvider>` component via the `user`
