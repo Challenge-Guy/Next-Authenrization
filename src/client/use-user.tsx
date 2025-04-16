@@ -4,37 +4,37 @@ import React, { ReactElement, useState, useEffect, useCallback, useContext, crea
 import ConfigProvider, { ConfigContext } from './use-config';
 
 /**
- * The user claims returned from the {@link useUser} hook. 
+ * The user claims returned from the {@link useUser} hook.
  *
- * @category Client  
+ * @category Client
  */
-export interface UserProfile { 
-  email?: string | null;   
-  email_verified?: boolean | null;   
-  name?: string | null; 
-  nickname?: string | null; 
-  picture?: string | null; 
-  sub?: string | null; 
-  updated_at?: string | null;    
-  org_id?: string | null;    
-  [key: string]: unknown; // Any custom claim which could be in the profile    
+export interface UserProfile {
+  email?: string | null;
+  email_verified?: boolean | null;
+  name?: string | null;
+  nickname?: string | null;
+  picture?: string | null;
+  sub?: string | null;
+  updated_at?: string | null;
+  org_id?: string | null;
+  [key: string]: unknown; // Any custom claim which could be in the profile
 }
 
 /**
- * The user context returned from the {@link useUser} hook.   
+ * The user context returned from the {@link useUser} hook.
  *
- * @category Client 
+ * @category Client
  */
 export type UserContext = {  
-  user?: UserProfile;  
-  error?: Error;   
-  isLoading: boolean;   
-  checkSession: () => Promise<void>;   
+  user?: UserProfile;
+  error?: Error;
+  isLoading: boolean;
+  checkSession: () => Promise<void>;
 };  
 
 /**
- * The error thrown by the default {@link UserFetcher}.        
- *                            
+ * The error thrown by the default {@link UserFetcher}.
+ *                         
  * The `status` property contains the status code of the response. It is `0` when the request   
  * fails, for example due to being offline.   
  *
