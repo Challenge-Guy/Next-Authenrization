@@ -5,11 +5,11 @@ export type ConfigContext = {
   loginUrl?: string;
 };
 
-const Config = createContext<ConfigContext>({});
+const Config = createContext<ConfigContext>({}); 
 
-export type ConfigProviderProps = React.PropsWithChildren<ConfigContext>; 
-export type UseConfig = () => ConfigContext; 
-export const useConfig: UseConfig = () => useContext<ConfigContext>(Config); 
+export type ConfigProviderProps = React.PropsWithChildren<ConfigContext>;  
+export type UseConfig = () => ConfigContext;  
+export const useConfig: UseConfig = () => useContext<ConfigContext>(Config);  
 
 export default ({
   children,
