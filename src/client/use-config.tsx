@@ -1,9 +1,9 @@
 'use client';
 import React, { ReactElement, useContext, createContext } from 'react';
 
-export type ConfigContext = {
-  loginUrl?: string;
-};
+export type ConfigContext = { 
+  loginUrl?: string; 
+}; 
 
 const Config = createContext<ConfigContext>({}); 
 
