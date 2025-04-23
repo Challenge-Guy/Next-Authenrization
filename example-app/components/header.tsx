@@ -14,9 +14,9 @@ const Header = (): React.ReactElement => {
         <nav>
           <ul>
             <li>
-              <Link href="/" legacyBehavior>
-                <a>App Router</a>
-              </Link>
+              <Link href="/" legacyBehavior> 
+                <a>App Router</a> 
+              </Link> 
             </li>
             <li>
               <Link href="/page-router" legacyBehavior>
@@ -29,11 +29,11 @@ const Header = (): React.ReactElement => {
       <div className={`header ${pageName} secondary`}>
         <nav>
           <ul>
-            <li>
-              <Link href="/page-router" legacyBehavior>
-                <a>Home</a>
-              </Link>
-            </li>
+            <li> 
+              <Link href="/page-router" legacyBehavior> 
+                <a>Home</a> 
+              </Link> 
+            </li> 
             <li>
               <Link href="/page-router/profile-csr" legacyBehavior>
                 <a>Profile (CSR)</a>
