@@ -27,13 +27,13 @@ const Header = (): React.ReactElement => {
         </nav>
       </div>
       <div className={`header ${pageName} secondary`}>
-        <nav>
-          <ul>
-            <li> 
-              <Link href="/page-router" legacyBehavior> 
-                <a>Home</a> 
-              </Link> 
-            </li> 
+        <nav> 
+          <ul> 
+            <li>  
+              <Link href="/page-router" legacyBehavior>
+                <a>Home</a>
+              </Link>
+            </li>
             <li>
               <Link href="/page-router/profile-csr" legacyBehavior>
                 <a>Profile (CSR)</a>
